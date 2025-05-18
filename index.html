@@ -16,6 +16,7 @@
       color: #333;
     }
 
+    /* Navigation Bar */
     .nav-links {
       text-align: center;
       padding: 15px;
@@ -42,6 +43,7 @@
       border-radius: 4px;
     }
 
+    /* Cover Photo Container and Photos */
     .cover-photo-container {
       position: relative;
       width: 100%;
@@ -63,11 +65,15 @@
       opacity: 1;
     }
 
+    /* Main content - ensure above cover photo */
     .main-content {
       text-align: center;
       padding: 30px 20px;
+      position: relative; /* make it positioned for z-index */
+      z-index: 10;        /* higher than cover photos */
     }
 
+    /* Profile picture */
     .profile-pic {
       width: 160px;
       height: 160px;
@@ -78,6 +84,7 @@
       background-color: white;
     }
 
+    /* Headings */
     h1 {
       font-size: 32px;
       margin-top: 20px;
@@ -89,6 +96,7 @@
       margin-top: 10px;
     }
 
+    /* Intro paragraph */
     .intro {
       max-width: 700px;
       margin: 20px auto;
@@ -96,6 +104,7 @@
       line-height: 1.6;
     }
 
+    /* Contact links */
     .contact-info a {
       display: block;
       color: #0066cc;
@@ -107,6 +116,7 @@
       text-decoration: underline;
     }
 
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       .intro {
         padding: 0 10px;
@@ -127,7 +137,7 @@
 </head>
 <body>
 
-  <!-- Navigation at top -->
+  <!-- Navigation bar at top -->
   <div class="nav-links">
     <a href="#" class="active">Home</a>
     <a href="#personal">Personal Details</a>
