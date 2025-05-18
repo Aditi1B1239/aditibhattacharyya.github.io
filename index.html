@@ -10,7 +10,6 @@
       margin: 0;
       color: #333;
     }
-
     /* Navigation */
     .nav-links {
       background: #333;
@@ -33,13 +32,44 @@
       background: #555;
     }
 
-    /* Cover Photo */
-    .cover-photo {
+    /* Cover photo slideshow container */
+    .slideshow {
+      position: relative;
       width: 100%;
       height: 300px;
-      background-image: url('iitb_background.jpeg'); /* For now, use single image */
+      overflow: hidden;
+    }
+    /* All slides */
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 300px;
       background-position: center;
       background-size: cover;
+      opacity: 0;
+      animation: fadeAnimation 15s infinite;
+    }
+    /* Each slide with different animation delay */
+    .slide:nth-child(1) {
+      background-image: url('iitb1_background.jpeg');
+      animation-delay: 0s;
+    }
+    .slide:nth-child(2) {
+      background-image: url('iitb2_background.jpeg');
+      animation-delay: 5s;
+    }
+    .slide:nth-child(3) {
+      background-image: url('iitb_background.jpeg');
+      animation-delay: 10s;
+    }
+
+    /* Fade animation keyframes */
+    @keyframes fadeAnimation {
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      30% {opacity: 1;}
+      40% {opacity: 0;}
+      100% {opacity: 0;}
     }
 
     /* Main content */
@@ -52,7 +82,6 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
       text-align: center;
     }
-
     .profile-pic {
       width: 150px;
       height: 150px;
@@ -63,30 +92,25 @@
       background: white;
       object-fit: cover;
     }
-
     .intro {
       margin-top: 20px;
       font-size: 16px;
       line-height: 1.5;
       color: #444;
     }
-
     .contact-short {
       margin-top: 30px;
       font-weight: bold;
       font-size: 16px;
     }
-
     .contact-short a {
       color: #0066cc;
       text-decoration: none;
       margin-left: 5px;
     }
-
     .contact-short a:hover {
       text-decoration: underline;
     }
-
     @media (max-width: 600px) {
       .main-content {
         margin: 20px 15px;
@@ -105,11 +129,15 @@
     <a href="education.html">Education</a>
     <a href="research.html">Research Area</a>
     <a href="publications.html">Publication</a>
-    <a href="blogs.html">Blogs</a>
+    <a href="blogs.html">BLOGS</a>
     <a href="contact.html">Contact Me</a>
   </nav>
 
-  <div class="cover-photo"></div>
+  <div class="slideshow">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
 
   <div class="main-content">
     <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
@@ -120,7 +148,7 @@
     </div>
 
     <div class="contact-short">
-      Feel free to reach out:
+      Feel free to reach out: 
       <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
     </div>
   </div>
