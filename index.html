@@ -19,26 +19,63 @@
       flex-direction: column;
     }
 
+    /* Navigation fixed on top */
+    .nav-links {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      color: #00aaff;
+    }
+
+    /* Spacer to push content below nav */
+    .nav-spacer {
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    /* Cover photo section */
     .cover-photo {
       width: 100%;
       height: 220px;
       background-size: cover;
       background-position: center;
       transition: background-image 1s ease-in-out;
-      box-shadow: inset 0 -5px 10px -5px rgba(0, 0, 0, 0.3);
+      position: relative;
     }
 
+    /* Main container with profile + intro */
     .main-container {
       display: flex;
       justify-content: space-between;
-      padding: 40px 60px 60px 60px;
-      flex: 1;
-      margin-top: 20px; /* space below cover photo */
+      padding: 40px 60px;
+      max-width: 1000px;
+      margin: 0 auto 60px auto;
+      gap: 40px;
     }
 
     .left-section {
       flex: 2;
       padding-right: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .right-section {
@@ -46,7 +83,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 0; /* no overlap */
+      justify-content: center;
     }
 
     .right-section img {
@@ -54,8 +91,9 @@
       height: 160px;
       border-radius: 50%;
       border: 4px solid white;
-      box-shadow: 0 0 15px rgba(0,0,0,0.35);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
       background-color: white;
+      object-fit: cover;
     }
 
     .contact-info {
@@ -68,6 +106,7 @@
       color: #0066cc;
       text-decoration: none;
       margin: 6px 0;
+      font-size: 14px;
     }
 
     .contact-info a:hover {
@@ -77,61 +116,53 @@
     .intro h1 {
       font-size: 32px;
       margin-bottom: 12px;
+      color: #222;
     }
 
     .intro h3 {
       font-size: 20px;
       margin-bottom: 20px;
       color: #555;
+      font-weight: normal;
     }
 
     .intro p {
       font-size: 16px;
       line-height: 1.6;
-    }
-
-    .nav-links {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-    }
-
-    .nav-links a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
+      color: #444;
     }
 
     @media (max-width: 768px) {
       .main-container {
         flex-direction: column;
         padding: 20px;
-        margin-top: 10px;
       }
 
       .left-section, .right-section {
         padding: 0;
+        margin: 0 auto;
+        text-align: center;
       }
 
       .right-section {
         margin-top: 30px;
-      }
-
-      .nav-links a {
-        display: block;
-        margin: 10px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="cover-photo" id="cover"></div>
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#personal">Personal Details</a>
+    <a href="#academic">Academic Details</a>
+    <a href="#research">Research Interest</a>
+    <a href="#publications">Publications</a>
+    <a href="#blogs">Blogs</a>
+  </nav>
+  <div class="nav-spacer"></div>
+
+  <section id="home" class="cover-photo"></section>
 
   <div class="main-container">
     <div class="left-section intro">
@@ -149,17 +180,9 @@
       <div class="contact-info">
         <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
         <a href="mailto:23d1239@iitb.ac.in">23d1239@iitb.ac.in</a>
-        <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/" target="_blank">LinkedIn Profile</a>
       </div>
     </div>
-  </div>
-
-  <div class="nav-links">
-    <a href="#personal">Personal Details</a>
-    <a href="#academic">Academic Details</a>
-    <a href="#research">Research Interest</a>
-    <a href="#publications">Publications</a>
-    <a href="#blogs">Blogs</a>
   </div>
 
   <script>
@@ -169,7 +192,7 @@
       'iitb2_background.jpeg'
     ];
     let index = 0;
-    const cover = document.getElementById('cover');
+    const cover = document.querySelector('.cover-photo');
 
     function rotateCover() {
       cover.style.backgroundImage = `url('${images[index]}')`;
