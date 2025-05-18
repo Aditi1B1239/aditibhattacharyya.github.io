@@ -106,15 +106,48 @@
       line-height: 1.6;
     }
 
-    /* Contact links */
-    .contact-info a {
-      display: block;
-      color: #0066cc;
-      text-decoration: none;
-      margin: 6px 0;
+    /* Contact prompt */
+    .contact-prompt {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
     }
 
-    .contact-info a:hover {
+    /* Contact email in main content */
+    .main-email {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .main-email:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact section */
+    #contact {
+      max-width: 400px;
+      margin: 40px auto 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #contact a {
+      display: block;
+      margin: 10px 0;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact a:hover {
       text-decoration: underline;
     }
 
@@ -138,6 +171,12 @@
         width: 130px;
         height: 130px;
       }
+
+      #contact {
+        max-width: 90%;
+        margin: 30px auto 50px auto;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -147,9 +186,10 @@
   <div class="nav-links">
     <a href="#" class="active">Home</a>
     <a href="#education">Education</a>
-    <a href="#research">Research Interest</a>
+    <a href="#research">Research Area</a>
     <a href="#publications">Publication</a>
     <a href="#blogs">BLOGS</a>
+    <a href="#contact">Contact</a>
   </div>
 
   <!-- Cover photo rotation -->
@@ -167,15 +207,20 @@
 
     <div class="intro">
       <p>
-        I have a keen interest in understanding the evolution of large-scale atmosphere-ocean interactions under a warming climate. My research focuses on the role of sea surface temperature (SST) patterns in modulating radiative feedbacks. These feedbacks influence climate responses such as changes in atmospheric circulation and precipitation. By investigating these processes alongside evolving SST patterns, I aim to improve our understanding of climate dynamics. This knowledge supports the development of more accurate and reliable climate projections.
+        I study how large-scale atmosphere-ocean interactions evolve in a warming climate. My research explores how sea surface temperature patterns affect radiative feedbacks that drive climate response, improving understanding of climate dynamics and projections.
       </p>
     </div>
 
-    <div class="contact-info">
-      <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
-      <a href="mailto:23d1239@iitb.ac.in">23d1239@iitb.ac.in</a>
-      <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/">LinkedIn Profile</a>
-    </div>
+    <div class="contact-prompt">Feel free to reach out:</div>
+    <a href="mailto:aditib1239@gmail.com" class="main-email">aditib1239@gmail.com</a>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
+    <a href="mailto:23d1239@iitb.ac.in">23d1239@iitb.ac.in</a>
+    <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
   </div>
 
   <script>
