@@ -32,14 +32,13 @@
       background: #555;
     }
 
-    /* Cover photo slideshow container */
+    /* Slideshow container */
     .slideshow {
       position: relative;
       width: 100%;
       height: 300px;
       overflow: hidden;
     }
-    /* All slides */
     .slide {
       position: absolute;
       width: 100%;
@@ -47,53 +46,55 @@
       background-position: center;
       background-size: cover;
       opacity: 0;
-      animation: fadeAnimation 15s infinite;
+      animation: fade 15s infinite;
     }
-    /* Each slide with different animation delay */
     .slide:nth-child(1) {
-      background-image: url('iitb1_background.jpeg');
+      background-image: url('iitb_background.jpeg');
       animation-delay: 0s;
     }
     .slide:nth-child(2) {
-      background-image: url('iitb2_background.jpeg');
+      background-image: url('iitb1_background.jpeg');
       animation-delay: 5s;
     }
     .slide:nth-child(3) {
-      background-image: url('iitb_background.jpeg');
+      background-image: url('iitb2_background.jpeg');
       animation-delay: 10s;
     }
-
-    /* Fade animation keyframes */
-    @keyframes fadeAnimation {
-      0% {opacity: 0;}
-      10% {opacity: 1;}
-      30% {opacity: 1;}
-      40% {opacity: 0;}
+    @keyframes fade {
+      0%   {opacity: 0;}
+      10%  {opacity: 1;}
+      30%  {opacity: 1;}
+      40%  {opacity: 0;}
       100% {opacity: 0;}
+    }
+
+    /* Profile pic overlapping slideshow */
+    .profile-pic {
+      position: absolute;
+      bottom: -75px;  /* half profile pic height */
+      left: 50%;
+      transform: translateX(-50%);
+      border: 4px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background: white;
+      z-index: 10;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     /* Main content */
     .main-content {
       max-width: 700px;
-      margin: 30px auto;
+      margin: 90px auto 30px; /* margin-top to clear profile pic */
       background: white;
       padding: 25px 20px;
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-top: -75px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      background: white;
-      object-fit: cover;
-    }
     .intro {
-      margin-top: 20px;
       font-size: 16px;
       line-height: 1.5;
       color: #444;
@@ -111,13 +112,22 @@
     .contact-short a:hover {
       text-decoration: underline;
     }
+
     @media (max-width: 600px) {
       .main-content {
-        margin: 20px 15px;
+        margin: 80px 15px 20px;
       }
       .nav-links a {
         display: block;
         margin: 8px 0;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        bottom: -60px;
+      }
+      .slideshow, .slide {
+        height: 200px;
       }
     }
   </style>
@@ -137,10 +147,11 @@
     <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
+
+    <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
   </div>
 
   <div class="main-content">
-    <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
     <div class="intro">
       <p>
         I study how large-scale atmosphere-ocean interactions evolve in a warming climate. My research explores how sea surface temperature patterns affect radiative feedbacks that drive climate response, improving understanding of climate dynamics and projections.
