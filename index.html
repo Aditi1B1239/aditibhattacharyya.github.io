@@ -31,18 +31,18 @@
     .nav-links a:hover {
       background: #555;
     }
-
     /* Slideshow container */
     .slideshow {
       position: relative;
       width: 100%;
-      height: 300px;
-      overflow: hidden;
+      height: 375px; /* increased height for profile pic */
+      /* overflow: hidden; */ /* removed to show profile pic fully */
+      background-color: #000; /* fallback */
     }
     .slide {
       position: absolute;
       width: 100%;
-      height: 300px;
+      height: 375px;
       background-position: center;
       background-size: cover;
       opacity: 0;
@@ -61,33 +61,31 @@
       animation-delay: 10s;
     }
     @keyframes fade {
-      0%   {opacity: 0;}
-      10%  {opacity: 1;}
-      30%  {opacity: 1;}
-      40%  {opacity: 0;}
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      30% {opacity: 1;}
+      40% {opacity: 0;}
       100% {opacity: 0;}
     }
-
     /* Profile pic overlapping slideshow */
     .profile-pic {
       position: absolute;
-      bottom: -75px;  /* half profile pic height */
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
-      border: 4px solid white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      background: white;
-      z-index: 10;
       width: 150px;
       height: 150px;
       border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background: white;
       object-fit: cover;
+      z-index: 10;
     }
-
     /* Main content */
     .main-content {
       max-width: 700px;
-      margin: 90px auto 30px; /* margin-top to clear profile pic */
+      margin: 180px auto 40px; /* margin top adjusted for profile pic overlap */
       background: white;
       padding: 25px 20px;
       border-radius: 8px;
@@ -112,10 +110,9 @@
     .contact-short a:hover {
       text-decoration: underline;
     }
-
     @media (max-width: 600px) {
       .main-content {
-        margin: 80px 15px 20px;
+        margin: 150px 15px 40px;
       }
       .nav-links a {
         display: block;
@@ -124,10 +121,13 @@
       .profile-pic {
         width: 120px;
         height: 120px;
-        bottom: -60px;
+        bottom: 5px;
       }
-      .slideshow, .slide {
-        height: 200px;
+      .slideshow {
+        height: 300px;
+      }
+      .slide {
+        height: 300px;
       }
     }
   </style>
@@ -147,7 +147,6 @@
     <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
-
     <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
   </div>
 
