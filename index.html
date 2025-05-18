@@ -31,46 +31,26 @@
     .nav-links a:hover {
       background: #555;
     }
-    /* Slideshow container */
-    .slideshow {
+
+    /* Cover photo container */
+    .cover {
       position: relative;
       width: 100%;
       height: 375px;
-      background-color: #000;
       overflow: visible; /* allow profile pic overflow */
     }
-    .slide {
-      position: absolute;
+
+    .cover-photo {
       width: 100%;
       height: 375px;
-      background-position: center;
-      background-size: cover;
-      opacity: 0;
-      animation: fade 15s infinite;
+      object-fit: cover;
+      display: block;
     }
-    .slide:nth-child(1) {
-      background-image: url('iitb_background.jpeg');
-      animation-delay: 0s;
-    }
-    .slide:nth-child(2) {
-      background-image: url('iitb1_background.jpeg');
-      animation-delay: 5s;
-    }
-    .slide:nth-child(3) {
-      background-image: url('iitb2_background.jpeg');
-      animation-delay: 10s;
-    }
-    @keyframes fade {
-      0% {opacity: 0;}
-      10% {opacity: 1;}
-      30% {opacity: 1;}
-      40% {opacity: 0;}
-      100% {opacity: 0;}
-    }
-    /* Profile pic overlapping slideshow - half over slideshow, half below */
+
+    /* Profile pic overlapping cover - half over cover, half below */
     .profile-pic {
       position: absolute;
-      bottom: -75px; /* half of height (150/2) outside slideshow */
+      bottom: -75px; /* half of height (150/2) outside cover */
       left: 50%;
       transform: translateX(-50%);
       width: 150px;
@@ -82,6 +62,7 @@
       object-fit: cover;
       z-index: 10;
     }
+
     /* Main content */
     .main-content {
       max-width: 700px;
@@ -123,10 +104,10 @@
         height: 120px;
         bottom: -60px; /* half of 120 */
       }
-      .slideshow {
+      .cover {
         height: 300px;
       }
-      .slide {
+      .cover-photo {
         height: 300px;
       }
     }
@@ -143,10 +124,8 @@
     <a href="contact.html">Contact Me</a>
   </nav>
 
-  <div class="slideshow">
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
+  <div class="cover">
+    <img src="campus_iitb.jpg" alt="Campus IIT Bombay" class="cover-photo" />
     <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
   </div>
 
