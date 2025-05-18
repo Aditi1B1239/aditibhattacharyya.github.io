@@ -2,90 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Education | Aditi Bhattacharyya</title>
+  <title>Aditi Bhattacharyya | Education</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #f9f9f9;
+      background: #f4f4f4;
+      margin: 0;
       color: #333;
     }
-    .nav-links {
+    /* Navigation */
+    nav {
       background: #333;
+      width: 100%;
       padding: 15px 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      margin-bottom: 30px;
     }
-    .nav-links a {
+    nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
       padding: 6px 12px;
       border-radius: 4px;
+      display: inline-block;
     }
-    .nav-links a:hover {
+    nav a:hover {
       background: #555;
     }
-    h2 {
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-    .education-entry {
+    main {
+      max-width: 800px;
+      margin: 40px auto;
       background: white;
-      padding: 20px 15px;
-      margin-bottom: 25px;
+      padding: 30px 25px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #222;
     }
     .degree {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 6px;
+      margin-bottom: 40px;
+    }
+    .degree-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 12px;
     }
     .institute {
       display: flex;
       align-items: center;
-      font-size: 16px;
-      margin-bottom: 4px;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 5px;
     }
     .institute img {
       width: 30px;
       height: 30px;
       object-fit: contain;
-      margin-right: 12px;
       border-radius: 4px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
     }
     .duration {
       font-style: italic;
       color: #555;
-      font-size: 14px;
+      margin-left: 42px; /* same space as logo + gap for alignment */
+      font-size: 16px;
     }
     @media (max-width: 600px) {
-      body {
-        margin: 20px 10px;
+      nav a {
+        margin: 8px 10px;
+        font-size: 14px;
+      }
+      main {
+        margin: 20px 15px;
+        padding: 20px 15px;
       }
       .institute {
-        flex-direction: column;
-        align-items: flex-start;
+        font-size: 16px;
       }
-      .institute img {
-        margin-bottom: 6px;
+      .degree-title {
+        font-size: 18px;
+      }
+      .duration {
+        margin-left: 42px;
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav-links">
+  <nav>
     <a href="index.html">Home</a>
     <a href="education.html">Education</a>
     <a href="research.html">Research Area</a>
@@ -94,34 +111,36 @@
     <a href="contact.html">Contact Me</a>
   </nav>
 
-  <h2>Education</h2>
+  <main>
+    <h1>Education</h1>
 
-  <div class="education-entry">
-    <div class="degree">Ph.D. Climate Studies</div>
-    <div class="institute">
-      <img src="iitb_logo.jpeg" alt="IIT Bombay Logo" />
-      <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Technology, Bombay</a>
-    </div>
-    <div class="duration">2024</div>
-  </div>
+    <section class="degree">
+      <div class="degree-title">Ph.D. Climate Studies</div>
+      <div class="institute">
+        <img src="iitb_logo.jpeg" alt="IIT Bombay Logo" />
+        <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener">Indian Institute of Technology, Bombay</a>
+      </div>
+      <div class="duration">2024</div>
+    </section>
 
-  <div class="education-entry">
-    <div class="degree">M.Sc, Atmospheric Sciences</div>
-    <div class="institute">
-      <img src="cu_logo.jpeg" alt="University of Calcutta Logo" />
-      <a href="https://www.caluniv.ac.in/" target="_blank" rel="noopener noreferrer">University of Calcutta</a>
-    </div>
-    <div class="duration">2020 - 2022</div>
-  </div>
+    <section class="degree">
+      <div class="degree-title">M.Sc, Atmospheric Sciences</div>
+      <div class="institute">
+        <img src="cu_logo.jpeg" alt="University of Calcutta Logo" />
+        <a href="https://www.caluniv.ac.in/" target="_blank" rel="noopener">University of Calcutta</a>
+      </div>
+      <div class="duration">2020 - 2022</div>
+    </section>
 
-  <div class="education-entry">
-    <div class="degree">B.Sc (Hons.), Physics</div>
-    <div class="institute">
-      <img src="vc_logo.jpeg" alt="Vidyasagar College Logo" />
-      <a href="https://vidyasagarcollege.edu.in/" target="_blank" rel="noopener noreferrer">Vidyasagar College</a>
-    </div>
-    <div class="duration">2017 - 2020</div>
-  </div>
+    <section class="degree">
+      <div class="degree-title">B.Sc (Hons.), Physics</div>
+      <div class="institute">
+        <img src="vc_logo.jpeg" alt="Vidyasagar College Logo" />
+        <a href="https://vidyasagarcollege.edu.in/" target="_blank" rel="noopener">Vidyasagar College</a>
+      </div>
+      <div class="duration">2017 - 2020</div>
+    </section>
+  </main>
 
 </body>
 </html>
