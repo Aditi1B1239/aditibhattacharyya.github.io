@@ -16,12 +16,51 @@
       color: #333;
     }
 
-    .cover-photo {
+    .nav-links {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-links a.active {
+      background-color: #555;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .cover-photo-container {
+      position: relative;
       width: 100%;
       height: 300px;
+      overflow: hidden;
+    }
+
+    .cover-photo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
       background-size: cover;
       background-position: center;
-      transition: background-image 1s ease-in-out;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .cover-photo.active {
+      opacity: 1;
     }
 
     .main-content {
@@ -68,23 +107,6 @@
       text-decoration: underline;
     }
 
-    .nav-links {
-      text-align: center;
-      padding: 15px;
-      background-color: #333;
-    }
-
-    .nav-links a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
     @media (max-width: 768px) {
       .intro {
         padding: 0 10px;
@@ -105,8 +127,24 @@
 </head>
 <body>
 
-  <div class="cover-photo" id="cover"></div>
+  <!-- Navigation at top -->
+  <div class="nav-links">
+    <a href="#" class="active">Home</a>
+    <a href="#personal">Personal Details</a>
+    <a href="#academic">Academic Details</a>
+    <a href="#research">Research Interest</a>
+    <a href="#publications">Publications</a>
+    <a href="#blogs">Blogs</a>
+  </div>
 
+  <!-- Cover photo rotation -->
+  <div class="cover-photo-container">
+    <div class="cover-photo active" style="background-image: url('iitb_background.jpeg');"></div>
+    <div class="cover-photo" style="background-image: url('iitb1_background.jpeg');"></div>
+    <div class="cover-photo" style="background-image: url('iitb2_background.jpeg');"></div>
+  </div>
+
+  <!-- Main content -->
   <div class="main-content">
     <img src="aditi_photo.jpeg" alt="Aditi's Photo" class="profile-pic" />
     <h1>Aditi Bhattacharyya</h1>
@@ -127,30 +165,17 @@
     </div>
   </div>
 
-  <div class="nav-links">
-    <a href="#personal">Personal Details</a>
-    <a href="#academic">Academic Details</a>
-    <a href="#research">Research Interest</a>
-    <a href="#publications">Publications</a>
-    <a href="#blogs">Blogs</a>
-  </div>
-
   <script>
-    const images = [
-      'iitb_background.jpeg',
-      'iitb1_background.jpeg',
-      'iitb2_background.jpeg'
-    ];
-    let index = 0;
-    const cover = document.getElementById('cover');
+    const photos = document.querySelectorAll('.cover-photo');
+    let currentIndex = 0;
 
-    function rotateCover() {
-      cover.style.backgroundImage = `url('${images[index]}')`;
-      index = (index + 1) % images.length;
+    function showNextPhoto() {
+      photos[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % photos.length;
+      photos[currentIndex].classList.add('active');
     }
 
-    rotateCover();
-    setInterval(rotateCover, 5000);
+    setInterval(showNextPhoto, 5000);
   </script>
 
 </body>
