@@ -67,12 +67,14 @@
       opacity: 1;
     }
 
-    /* Main content - ensure above cover photo */
+    /* Main content */
     .main-content {
       text-align: center;
       padding: 30px 20px;
       position: relative;
       z-index: 10;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     /* Profile picture */
@@ -106,32 +108,11 @@
       line-height: 1.6;
     }
 
-    /* Contact prompt */
-    .contact-prompt {
-      margin-top: 25px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #444;
-    }
-
-    /* Contact email in main content */
-    .main-email {
-      margin-top: 8px;
-      font-size: 16px;
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .main-email:hover {
-      text-decoration: underline;
-    }
-
-    /* Contact section */
+    /* Contact Me Section */
     #contact {
       max-width: 400px;
-      margin: 40px auto 60px auto;
-      padding: 20px;
+      margin: 60px auto 60px auto;
+      padding: 30px 25px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
@@ -139,12 +120,17 @@
       font-size: 16px;
     }
 
+    #contact h2 {
+      margin-bottom: 20px;
+    }
+
     #contact a {
       display: block;
-      margin: 10px 0;
+      margin: 12px 0;
       color: #0066cc;
       text-decoration: none;
       font-weight: 600;
+      font-size: 17px;
     }
 
     #contact a:hover {
@@ -174,8 +160,8 @@
 
       #contact {
         max-width: 90%;
-        margin: 30px auto 50px auto;
-        padding: 15px;
+        margin: 40px auto 50px auto;
+        padding: 20px;
       }
     }
   </style>
@@ -189,7 +175,7 @@
     <a href="#research">Research Area</a>
     <a href="#publications">Publication</a>
     <a href="#blogs">BLOGS</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact">Contact Me</a>
   </div>
 
   <!-- Cover photo rotation -->
@@ -210,12 +196,9 @@
         I study how large-scale atmosphere-ocean interactions evolve in a warming climate. My research explores how sea surface temperature patterns affect radiative feedbacks that drive climate response, improving understanding of climate dynamics and projections.
       </p>
     </div>
-
-    <div class="contact-prompt">Feel free to reach out:</div>
-    <a href="mailto:aditib1239@gmail.com" class="main-email">aditib1239@gmail.com</a>
   </div>
 
-  <!-- Contact Section -->
+  <!-- Contact Me Section -->
   <div id="contact">
     <h2>Contact Me</h2>
     <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
