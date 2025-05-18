@@ -2,222 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aditi Bhattacharyya | PhD Student at IIT Bombay</title>
+  <title>Aditi Bhattacharyya | Home</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background: #f4f4f4;
+      margin: 0;
       color: #333;
     }
 
-    /* Navigation Bar */
+    /* Navigation */
     .nav-links {
-      width: 100%;
-      background-color: #333;
+      background: #333;
+      padding: 15px 0;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
     }
-
     .nav-links a {
       color: white;
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
       padding: 6px 12px;
       border-radius: 4px;
     }
-
     .nav-links a:hover {
-      text-decoration: underline;
+      background: #555;
     }
 
-    .nav-links a.active {
-      background-color: #555;
-    }
-
-    /* Cover Photo Container and Photos */
-    .cover-photo-container {
-      position: relative;
+    /* Cover Photo */
+    .cover-photo {
       width: 100%;
       height: 300px;
-      overflow: hidden;
-    }
-
-    .cover-photo {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
+      background-image: url('iitb_background.jpeg'); /* For now, use single image */
       background-position: center;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-    }
-
-    .cover-photo.active {
-      opacity: 1;
+      background-size: cover;
     }
 
     /* Main content */
     .main-content {
-      text-align: center;
-      padding: 30px 20px;
-      position: relative;
-      z-index: 10;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    /* Profile picture */
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      margin-top: -80px;
-      background-color: white;
-    }
-
-    /* Headings */
-    h1 {
-      font-size: 32px;
-      margin-top: 20px;
-    }
-
-    h3 {
-      font-size: 20px;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    /* Intro paragraph */
-    .intro {
       max-width: 700px;
-      margin: 20px auto;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    /* Contact Me Section */
-    #contact {
-      max-width: 400px;
-      margin: 60px auto 60px auto;
-      padding: 30px 25px;
+      margin: 30px auto;
       background: white;
+      padding: 25px 20px;
       border-radius: 8px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
       text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-top: -75px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background: white;
+      object-fit: cover;
+    }
+
+    .intro {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .contact-short {
+      margin-top: 30px;
+      font-weight: bold;
       font-size: 16px;
     }
 
-    #contact h2 {
-      margin-bottom: 20px;
-    }
-
-    #contact a {
-      display: block;
-      margin: 12px 0;
+    .contact-short a {
       color: #0066cc;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 17px;
+      margin-left: 5px;
     }
 
-    #contact a:hover {
+    .contact-short a:hover {
       text-decoration: underline;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .intro {
-        padding: 0 10px;
+    @media (max-width: 600px) {
+      .main-content {
+        margin: 20px 15px;
       }
-
-      .nav-links {
-        flex-direction: column;
-        padding: 15px 0;
-      }
-
       .nav-links a {
-        margin: 10px 0;
-      }
-
-      .profile-pic {
-        margin-top: -60px;
-        width: 130px;
-        height: 130px;
-      }
-
-      #contact {
-        max-width: 90%;
-        margin: 40px auto 50px auto;
-        padding: 20px;
+        display: block;
+        margin: 8px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation bar at top -->
-  <div class="nav-links">
-    <a href="#" class="active">Home</a>
-    <a href="#education">Education</a>
-    <a href="#research">Research Area</a>
-    <a href="#publications">Publication</a>
-    <a href="#blogs">BLOGS</a>
-    <a href="#contact">Contact Me</a>
-  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="research.html">Research Area</a>
+    <a href="publications.html">Publication</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
 
-  <!-- Cover photo rotation -->
-  <div class="cover-photo-container">
-    <div class="cover-photo active" style="background-image: url('iitb_background.jpeg');"></div>
-    <div class="cover-photo" style="background-image: url('iitb1_background.jpeg');"></div>
-    <div class="cover-photo" style="background-image: url('iitb2_background.jpeg');"></div>
-  </div>
+  <div class="cover-photo"></div>
 
-  <!-- Main content -->
   <div class="main-content">
-    <img src="aditi_photo.jpeg" alt="Aditi's Photo" class="profile-pic" />
-    <h1>Aditi Bhattacharyya</h1>
-    <h3>PhD Student | Climate Studies | IIT Bombay</h3>
-
+    <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
     <div class="intro">
       <p>
         I study how large-scale atmosphere-ocean interactions evolve in a warming climate. My research explores how sea surface temperature patterns affect radiative feedbacks that drive climate response, improving understanding of climate dynamics and projections.
       </p>
     </div>
+
+    <div class="contact-short">
+      Feel free to reach out:
+      <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
+    </div>
   </div>
-
-  <!-- Contact Me Section -->
-  <div id="contact">
-    <h2>Contact Me</h2>
-    <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>
-    <a href="mailto:23d1239@iitb.ac.in">23d1239@iitb.ac.in</a>
-    <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-  </div>
-
-  <script>
-    const photos = document.querySelectorAll('.cover-photo');
-    let currentIndex = 0;
-
-    function showNextPhoto() {
-      photos[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % photos.length;
-      photos[currentIndex].classList.add('active');
-    }
-
-    setInterval(showNextPhoto, 5000);
-  </script>
 
 </body>
 </html>
