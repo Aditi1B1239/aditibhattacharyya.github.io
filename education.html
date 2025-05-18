@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aditi Bhattacharyya | Education</title>
+  <title>Education | Aditi Bhattacharyya</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f9f9f9;
       color: #333;
     }
-    /* Navigation */
     .nav-links {
       background: #333;
       padding: 15px 0;
@@ -18,10 +19,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      margin-bottom: 30px;
     }
     .nav-links a {
       color: white;
-      margin: 0 20px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
@@ -31,37 +33,53 @@
     .nav-links a:hover {
       background: #555;
     }
-    /* Content */
-    .content {
-      max-width: 700px;
-      margin: 40px auto;
+    h2 {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .education-entry {
       background: white;
-      padding: 30px 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #222;
-    }
-    .edu-item {
+      padding: 20px 15px;
       margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .degree {
       font-weight: bold;
       font-size: 18px;
-      color: #333;
+      margin-bottom: 6px;
     }
-    .year {
-      color: #666;
-      font-style: italic;
-      margin-left: 10px;
-    }
-    .institution {
-      margin-top: 6px;
+    .institute {
+      display: flex;
+      align-items: center;
       font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .institute img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      margin-right: 12px;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .duration {
+      font-style: italic;
       color: #555;
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 20px 10px;
+      }
+      .institute {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .institute img {
+        margin-bottom: 6px;
+      }
     }
   </style>
 </head>
@@ -76,26 +94,33 @@
     <a href="contact.html">Contact Me</a>
   </nav>
 
-  <div class="content">
-    <h1>Education</h1>
-    
-    <div class="edu-item">
-      <div class="degree">Ph.D. Climate Studies</div>
-      <div class="year">2024</div>
-      <div class="institution">Indian Institute of Technology, Bombay</div>
-    </div>
-    
-    <div class="edu-item">
-      <div class="degree">M.Sc, Atmospheric Sciences</div>
-      <div class="year">2020 - 2022</div>
-      <div class="institution">University of Calcutta</div>
-    </div>
+  <h2>Education</h2>
 
-    <div class="edu-item">
-      <div class="degree">B.Sc (Hons.), Physics</div>
-      <div class="year">2017 - 2020</div>
-      <div class="institution">Vidyasagar College</div>
+  <div class="education-entry">
+    <div class="degree">Ph.D. Climate Studies</div>
+    <div class="institute">
+      <img src="iitb_logo.jpeg" alt="IIT Bombay Logo" />
+      <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Technology, Bombay</a>
     </div>
+    <div class="duration">2024</div>
+  </div>
+
+  <div class="education-entry">
+    <div class="degree">M.Sc, Atmospheric Sciences</div>
+    <div class="institute">
+      <img src="cu_logo.jpeg" alt="University of Calcutta Logo" />
+      <a href="https://www.caluniv.ac.in/" target="_blank" rel="noopener noreferrer">University of Calcutta</a>
+    </div>
+    <div class="duration">2020 - 2022</div>
+  </div>
+
+  <div class="education-entry">
+    <div class="degree">B.Sc (Hons.), Physics</div>
+    <div class="institute">
+      <img src="vc_logo.jpeg" alt="Vidyasagar College Logo" />
+      <a href="https://vidyasagarcollege.edu.in/" target="_blank" rel="noopener noreferrer">Vidyasagar College</a>
+    </div>
+    <div class="duration">2017 - 2020</div>
   </div>
 
 </body>
