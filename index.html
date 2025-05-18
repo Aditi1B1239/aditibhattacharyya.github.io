@@ -18,19 +18,23 @@
 
     /* Navigation Bar */
     .nav-links {
-      text-align: center;
-      padding: 15px;
+      width: 100%;
       background-color: #333;
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
     }
 
     .nav-links a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
     }
 
     .nav-links a:hover {
@@ -39,8 +43,6 @@
 
     .nav-links a.active {
       background-color: #555;
-      padding: 6px 12px;
-      border-radius: 4px;
     }
 
     /* Cover Photo Container and Photos */
@@ -69,8 +71,8 @@
     .main-content {
       text-align: center;
       padding: 30px 20px;
-      position: relative; /* make it positioned for z-index */
-      z-index: 10;        /* higher than cover photos */
+      position: relative;
+      z-index: 10;
     }
 
     /* Profile picture */
@@ -122,8 +124,12 @@
         padding: 0 10px;
       }
 
+      .nav-links {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
       .nav-links a {
-        display: block;
         margin: 10px 0;
       }
 
@@ -140,11 +146,10 @@
   <!-- Navigation bar at top -->
   <div class="nav-links">
     <a href="#" class="active">Home</a>
-    <a href="#personal">Personal Details</a>
-    <a href="#academic">Academic Details</a>
+    <a href="#education">Education</a>
     <a href="#research">Research Interest</a>
-    <a href="#publications">Publications</a>
-    <a href="#blogs">Blogs</a>
+    <a href="#publications">Publication</a>
+    <a href="#blogs">BLOGS</a>
   </div>
 
   <!-- Cover photo rotation -->
