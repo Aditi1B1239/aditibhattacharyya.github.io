@@ -5,58 +5,119 @@
   <title>Aditi Bhattacharyya | PhD Student at IIT Bombay</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: url('iitb_background.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 50px;
       margin: 0;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Top Banner */
+    .banner {
+      background-image: url('iitb_background.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      position: relative;
+    }
+
+    /* Main content layout */
+    .main {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      margin-top: -70px;
+      padding: 20px;
     }
-    img {
-      width: 200px;
+
+    /* Left - Bio */
+    .left {
+      flex: 2;
+      padding: 20px;
+    }
+
+    /* Right - Profile + Contact */
+    .right {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Profile photo */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      margin-top: -80px;
     }
-    .content {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 600px;
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
     }
+
+    h2 {
+      font-size: 20px;
+      color: #666;
+    }
+
     a {
-      color: #87CEEB;
+      color: #0077cc;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Bottom Navigation Links */
+    .nav-links {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <img src="aditi_photo.jpeg" alt="Aditi's Photo" /><br /><br />
-    <h1>Aditi Bhattacharyya</h1>
-    <h3>PhD Student | Climate Studies | IIT Bombay</h3>
-    <p>
-      I am interested in understanding Climate Change from the physical perspective through climate dynamics,
-      feedback systems, and internal variability. My goal is to improve future climate projections and support
-      effective adaptation strategies.
-    </p>
-    <p>
-      Email:
-      <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a>,
-      <a href="mailto:23d1239@iitb.ac.in">23d1239@iitb.ac.in</a>
-    </p>
-    <p>
-      <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/" target="_blank" rel="noopener noreferrer">
-        LinkedIn Profile
-      </a>
-    </p>
+
+  <div class="banner"></div>
+
+  <div class="main">
+    <div class="right">
+      <img src="aditi_photo.jpeg" alt="Aditi Bhattacharyya" class="profile-pic" />
+      <p>
+        <a href="mailto:aditib1239@gmail.com">aditib1239@gmail.com</a><br />
+        <a href="mailto:23d1239@iitb.ac.in">23d1239@iitb.ac.in</a><br />
+        <a href="https://www.linkedin.com/in/aditi-bhattacharyya-5a317932b/">LinkedIn</a>
+      </p>
+    </div>
+
+    <div class="left">
+      <h1>Aditi Bhattacharyya</h1>
+      <h2>PhD Student | Climate Studies | IIT Bombay</h2>
+      <p>
+        I am interested in understanding Climate Change from the physical perspective through climate dynamics, 
+        feedback systems, and internal variability. My goal is to improve future climate projections and support 
+        effective adaptation strategies.
+      </p>
+    </div>
   </div>
+
+  <div class="nav-links">
+    <a href="#">Personal Details</a>
+    <a href="#">Academic Details</a>
+    <a href="#">Research Interests</a>
+    <a href="#">Publications</a>
+    <a href="#">Blogs</a>
+  </div>
+
 </body>
 </html>
+
 
