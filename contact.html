@@ -12,51 +12,57 @@
       background: #fff;
       color: #333;
     }
+
+    /* Navigation */
     nav {
-      background-color: #000; /* Black navbar */
+      background: #333;
       width: 100%;
       padding: 15px 0;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-    }
-    nav li {
-      margin: 0 25px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
-      color: #fff;
+      color: white;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: inline-block;
     }
     nav a:hover {
-      text-decoration: underline;
+      background: #555;
     }
+
     h2 {
       text-align: center;
       margin: 40px 0 20px;
     }
+
     .contact-info {
       max-width: 700px;
       margin: 0 auto;
       padding: 0 20px 40px;
     }
+
     .contact-info p {
       font-size: 18px;
       margin: 15px 0;
     }
+
     .contact-info i {
       margin-right: 10px;
       color: #0066cc;
     }
+
     a {
       color: #0066cc;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
@@ -66,13 +72,11 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="research.html">Research</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <h2>Contact Me</h2>
